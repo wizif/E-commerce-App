@@ -1,15 +1,20 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+
 import './App.css'
 import Header from './common/header/Header'
-
+import Pages from "./pages/Pages"
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>
-    <Header/>
+    <Router>
+<Header/>
+<Switch>
+  <Route path='/' exact>
+  <Pages/>
+  </Route>
+</Switch>
+    </Router>
  </>
   )
 }
